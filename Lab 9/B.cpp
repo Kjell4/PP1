@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main(){
+
+int a, n;
+cin >> n;
+vector <int> v;
+
+for(int i=0;i<n;i++){
+    cin >> a;
+    v.push_back(a);
+}
+
+sort(v.begin(), v.end());
+
+for(int i=n-1;i>=0;i--){
+    if(v[i]%2==0){
+        cout << v[i] << " ";
+    }
+}
+
+for(int i=0;i<n;i++){
+    if(v[i]%2!=0){
+        cout << v[i] << " ";
+    }
+}
+
+}
